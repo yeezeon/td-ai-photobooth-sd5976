@@ -1,0 +1,54 @@
+# macOS system files
+.DS_Store
+*.swp
+*~
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+*.so
+.env # Don't commit API keys or secrets!
+
+# TouchDesigner specific
+*.autosave.toe
+*.*.*.toe # Ignore backup files like project.1.toe, project.2.toe etc.
+Backup/
+Config/ # Often contains local paths/settings
+Cache/ # Cache TOP outputs etc.
+Plugins/ # If large or managed separately
+*.mov # Avoid committing large video files unless essential
+*.mp4
+*.jpg # Avoid unless they are core assets, not outputs
+*.png # Avoid unless they are core assets, not outputs
+output/ # Common folder name for generated images/videos
+
+# ComfyUI specific (if running locally within the project)
+ComfyUI/output/
+ComfyUI/temp/
+ComfyUI/models/checkpoints/ # DO NOT COMMIT LARGE MODELS
+ComfyUI/models/loras/      # DO NOT COMMIT LARGE MODELS
+ComfyUI/models/controlnet/
+ComfyUI/models/vae/
+ComfyUI/models/ipadapter/
+# Add other ComfyUI model types as needed
+
+# Large Data Files (manage separately or document download links)
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.sublime-workspace
